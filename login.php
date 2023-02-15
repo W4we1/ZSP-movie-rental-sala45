@@ -1,8 +1,26 @@
-<?php
-if(isset($_POST['login']))
+<html>
+<head>
+    </head>
+    <center>
+    <fieldset>
+        <legend>Login</legend>
+        <form action="loginprocess.php" method="POST"><br><br>
+            Username:<input type="text" required="" name="uname"><br><br>
+            Password:<input type="text" required="" name="upassword"><br><br>
+            <input type="submit" value="Login" name="sub">
+            <br>
+            <?php
+            if(isset($REQUEST["err"]))
+                $msg="Invalid username or Password";
+            ?>
+            <p style="color:red;">
+            <?php if(isset($msg))
 {
-    $email=$_POST['email'];
-    $password=md5($_POST['password']);
-    $sql="SELECT email, password FROM users";
-    
+    echo $msg
 }
+                ?>
+            </p>
+        </form>
+        </fieldset>
+    </center>
+</html>
