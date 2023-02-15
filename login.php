@@ -15,9 +15,9 @@
             ?>
             <p style="color:red;">
             <?php if(isset($msg))
-{
+
     echo $msg
-}
+
                 ?>
             </p>
         </form>
