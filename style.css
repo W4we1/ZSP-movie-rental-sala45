@@ -1,0 +1,11 @@
+html {
+    background-color: darkgrey;
+}
+#login {
+    border: solid blue 1px;
+    width: 25%;
+    border-radius: 2px;
+    margin: 120px auto;
+    background-image: #8FBC8F;
+    padding: 50px;
+}
