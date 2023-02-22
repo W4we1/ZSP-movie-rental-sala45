@@ -8,7 +8,7 @@
             <legend><h1>Login</h1></legend>
         <form action="loginprocess.php" method="POST"><br><br>
             Email:<br><input type="text" required="" name="email"><br><br>
-            Password:<input type="text" required="" name="password"><br><br>
+            Password:<br><input type="text" required="" name="password"><br><br>
             <input type="submit" value="Login" name="sub">
             <br>
             <?php
