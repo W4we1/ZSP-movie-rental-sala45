@@ -8,14 +8,14 @@
         require('config.php');
         if (isset($_REQUEST['email'])) {
             $name=stripslashes($_REQUEST['name']);
-            $name=mysqli_real_escape_string($name);
+            $name=mysqli_real_escape_string($con,$name);
             $surname=stripslashes($_REQUEST['surname']);
-            $surname=mysqli_real_escape_string($surname);
+            $surname=mysqli_real_escape_string($con,$surname);
             $email=stripslashes($_REQUEST['email']);
-            $email=mysqli_real_escape_string($email);
+            $email=mysqli_real_escape_string($con,$email);
             $password=stripslashes($_REQUEST['password']);
-            $password=mysqli_real_escape_string($password);
-                $query="INSERT INTO `users` (name, surname, email, password) VALUES
+            $password=mysqli_real_escape_string($con,$password);
+                $query="INSERT INTO 'users' (name, surname, email, password) VALUES
                 ('$name', '$surname', '$email', '$password')";
             $result=mysqli_query($con,$query);
             if($result){
